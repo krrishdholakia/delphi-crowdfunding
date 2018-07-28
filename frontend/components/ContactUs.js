@@ -13,10 +13,7 @@ class ContactUs extends React.Component {
                 <h3 className="contact-us-title"> Send us an email </h3> 
                 <p style={{ fontSize: '20px' }}> @ </p>
                 <h3 className="contact-us-email"> delphiCrowdfunding@gmail.com </h3> 
-                <p style={{ fontSize: '20px' }}> ❤️ </p> 
-                <button onClick={() => this.setState({ show: true })}>Alert</button>            
-                
-                />
+                <p style={{ fontSize: '20px' }}> ❤️ </p>
             </div>
         );
     }   
