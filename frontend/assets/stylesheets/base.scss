@@ -3,6 +3,19 @@ h1 {
   font-weight: 200;
 }
 
+h3 {
+  font-family: futura;
+  color: black
+}
+
+h2 {
+  font-family: futura; 
+  font-weight: lighter; 
+}
+p {
+  font-family: futura;
+}
+
 .header-content {
   display: flex; 
   justify-content: space-between;
@@ -22,6 +35,7 @@ h1 {
   padding-right: 10px;  
   margin-top: 0;  
   border-color: #a6ed6d;
+  text-decoration: none;
 }
 
 .header-actions{
@@ -33,6 +47,7 @@ h1 {
 .header-actions-links {
   font-weight: lighter;
   margin-top: 0;
+  text-decoration: none;
 }
 
 .main-content {
@@ -133,4 +148,47 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.faq-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.faq-title {
+  font-size: 50px; 
+}
+
+.faq-question {
+  border-bottom-style: solid;
+  border-bottom-color: #a6ed6d;
+}
+
+.faq-answer {
+  font-weight: lighter; 
+  font-size: 16px; 
+}
+
+.contact-us-content {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.contact-us-title {
+  font-size: 50px;
+}
+
+.contact-us-email {
+  border-bottom-style: solid; 
+  border-bottom-color: #a6ed6d;
+  font-size: 30px
+}
+
+.btn.btn-lg.btn-primary {
+  padding:10px 16px;
+  font-size: 18px;
+  line-height: 1.333; 
+  border-radius: 6px
 }

@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import isEmail from 'validator/lib/isEmail';
 // import { AxiosProvider, Request, Get, Delete, Head, Post, Put, Patch, withAxios } from 'react-axios'
 import axios from 'axios';
+import SweetAlert from 'react-bootstrap-sweetalert';
+
 class MainContent extends React.Component {
     constructor(props) {
         super(props)
@@ -11,7 +13,10 @@ class MainContent extends React.Component {
             email:"",
             response:"",
             errorEmail:"",
-            errorQuestion:""
+            errorQuestion:"",
+            showSuccess: false,
+            showFailure: false
+
         }       
         
         this.handleEmail = this.handleEmail.bind(this)
@@ -47,9 +52,11 @@ class MainContent extends React.Component {
             axios.post(`https://delphi-crowdfunding.herokuapp.com/api/applicants/newApplicant`, this.state)
                 .then(({ data }) => {
                         console.log("Data: ", data)
+                        this.setState({showSuccess: true})
                 })
                 .catch((error) => {
                     console.log(error);
+                    this.setState({showFailure: true})
                   });
         } else {
             console.log("failure!")
@@ -74,6 +81,18 @@ class MainContent extends React.Component {
                     <div className="error">{this.state.errorQuestion? this.state.errorQuestion:null}</div>
                     <h3 className="sign-up-submit" onClick={this.onSubmit}> Sign Up! </h3>
                 </div>
+                <SweetAlert
+                    success
+                    show={this.state.showSuccess}
+                    title="You're all signed up!"
+                    onConfirm={() => this.setState({ showSuccess: false })}
+                    />
+                <SweetAlert
+                    error
+                    show={this.state.showFailure}
+                    title="Error signing up... Try again!"
+                    onConfirm={() => this.setState({ showFailure: false })}
+                    />
             </div>
         )
     }

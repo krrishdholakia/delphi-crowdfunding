@@ -4,14 +4,20 @@ import { connect } from 'react-redux';
 import Title from '../components/Title';
 import TopNav from '../components/TopNav';
 import MainContent from '../components/MainContent';
+import FAQ from '../components/FAQ';
+import ContactUs from '../components/ContactUs';
+import {BrowserRouter, Route, Switch, Redirect, withRouter } from "react-router-dom";
 
 const AppContainer = ({ name }) => {
     console.log("reaches AppContainer")
     return (
         <div>
-            {/* <Title name={name} /> */}
-            <TopNav name={name}/>
-            <MainContent/>
+            <TopNav/>
+            <Switch>
+                <Route exact path="/" component={MainContent}/>
+                <Route path="/faq" component={FAQ}/>
+                <Route path="/contactus" component={ContactUs}/>
+            </Switch>
         </div>
     );
 };
@@ -31,7 +37,7 @@ const mapDispatchToProps = (/* dispatch */) => {
     };
 };
 
-export default connect(
+export default withRouter(connect(
     mapStateToProps,
     mapDispatchToProps
-)(AppContainer);
+)(AppContainer));
