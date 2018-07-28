@@ -1,0 +1,136 @@
+h1 {
+  font-family: helvetica;
+  font-weight: 200;
+}
+
+.header-content {
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  font-family: Futura;
+}
+
+.header-title {
+  font-size: 30px;
+  font-family: Futura; 
+  font-weight: lighter; 
+  border-style: solid; 
+  border-radius: 25px;
+  padding-top: 2px; 
+  padding-bottom: 2px; 
+  padding-left: 10px; 
+  padding-right: 10px;  
+  margin-top: 0;  
+  border-color: #a6ed6d;
+}
+
+.header-actions{
+  display: flex; 
+  justify-content: space-around; 
+  width: 25%; 
+}
+
+.header-actions-links {
+  font-weight: lighter;
+  margin-top: 0;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-title {
+  font-family: futura;
+  font-size: 50px;
+}
+
+.main-description {
+  font-family: futura;
+  font-size: 30px;
+  text-align: center;
+}
+
+.sign-up {
+  font-family: futura;
+  font-weight: lighter;
+  border-bottom-style: solid;
+  padding-bottom: 2px;
+  border-color: #a6ed6d;
+  font-size: 30px;
+}
+
+.sign-up-email {
+  width: 25%;
+  padding-left: 1%;
+  padding-right: 5%;
+  height: 3em;
+  border-style:  solid;
+  border-width: 1px;
+  border-radius:  2px;
+  box-sizing:  border-box;
+  border-color:  rgb(219, 219, 219);
+  font-size: 16px;
+  font-weight: lighter;
+  outline: none; 
+}
+
+.sign-up-email-container {
+  margin-bottom: 2%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-up-question-container {
+  margin-bottom: 2%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-up-question {
+  height: 100px;
+  padding-left: 1%;
+  padding-top: 1%; 
+  width: 25%;
+  font-size: 16px;
+  font-weight: lighter;
+  border-color: #dbdbdb;
+  border-radius: 2px;
+  border-style: solid;
+  border-width: 1px;
+  box-sizing: border-box;
+  overflow: auto;
+  outline: none;
+}
+
+.error {
+  text-align:center;
+  margin:5px 0;
+  padding:5px 10px;
+  color:#c92c43;
+  font-family: arial;
+}
+
+.sign-up-submit {
+  width: 15%;
+  text-align: center;
+  border-style: solid;
+  font-size: 20px;
+  font-family: futura;
+  font-weight: lighter;
+  border-width: 2px;
+  border-radius: 25px;
+  box-sizing: border-box;
+  border-color: #a6ed6d;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
