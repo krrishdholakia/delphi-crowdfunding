@@ -43,7 +43,8 @@ class MainContent extends React.Component {
         if (isValidEmail && isValidResponse) {
             console.log("isEmail stuff: ", isEmail(this.state.email))
             console.log("success!")
-            axios.post(`https://delphi-crowdfunding.herokuapp.com/api/applicants/newApplicant`, {email:"randomemail@gmail.com", response:"relevant"})
+            console.log("axios: ", axios)
+            axios.post(`https://delphi-crowdfunding.herokuapp.com/api/applicants/newApplicant`, this.state)
                 .then(({ data }) => {
                         console.log("Data: ", data)
                 })

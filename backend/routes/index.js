@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-// const db = 'mongodb://krrish:Sateben13@ds257981.mlab.com:57981/delphi';
 const db = process.env.MONGLAB_URI
 const morgan = require('morgan');
 

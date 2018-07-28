@@ -6,7 +6,7 @@ const router = express.Router();
 // const { check, oneOf, validationResult } = require('express-validator/check');
 //Local Imports
 const Applicants = require('../models/applicant');
-const db = 'mongodb://krrish:Sateben13@ds257981.mlab.com:57981/delphi'
+const db = process.env.MONGOLAB_URI
 // Use native ES6 promises
 mongoose.Promise = global.Promise;
 mongoose.connect(db);
