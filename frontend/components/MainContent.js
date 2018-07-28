@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import isEmail from 'validator/lib/isEmail';
- 
+// import { AxiosProvider, Request, Get, Delete, Head, Post, Put, Patch, withAxios } from 'react-axios'
+import axios from 'axios';
 class MainContent extends React.Component {
     constructor(props) {
         super(props)
@@ -42,6 +43,13 @@ class MainContent extends React.Component {
         if (isValidEmail && isValidResponse) {
             console.log("isEmail stuff: ", isEmail(this.state.email))
             console.log("success!")
+            axios.post(`https://delphi-crowdfunding.herokuapp.com/api/applicants/newApplicant`, {email:"randomemail@gmail.com", response:"relevant"})
+                .then(({ data }) => {
+                        console.log("Data: ", data)
+                })
+                .catch((error) => {
+                    console.log(error);
+                  });
         } else {
             console.log("failure!")
         }
