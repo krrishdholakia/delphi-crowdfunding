@@ -38,7 +38,7 @@ body {
   margin-top: 0;  
   border-color: #a6ed6d;
   text-decoration: none;
-  font-weight: lighter; 
+  font-weight: 400;
 }
 
 .header-actions{
@@ -50,7 +50,7 @@ body {
 .header-actions-links {
   margin-top: 0;
   text-decoration: none;
-  font-weight: lighter; 
+  font-weight: 400;
 }
 
 .main-content-container {
@@ -76,7 +76,7 @@ body {
   font-family: Josefin Sans, sans-serif;
   font-size: 30px;
   text-align: center;
-  font-weight: lighter;
+  font-weight: 300;
 }
 
 .quick-faq-container {
@@ -100,7 +100,7 @@ body {
 }
 
 .quick-faq-answer-component {
-  width: 100%; 
+  width: 100%;
 }
 
 .sign-up {
@@ -199,12 +199,14 @@ body {
 .faq-question {
   border-bottom-style: solid;
   border-bottom-color: #a6ed6d;
-  text-align: center; 
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400; 
 }
 
 .faq-answer {
-  font-weight: lighter; 
-  font-size: 16px; 
+  font-weight: 300; 
+  font-size: 18px; 
   text-align: center
 }
 
@@ -221,12 +223,15 @@ body {
 .contact-us-email {
   border-bottom-style: solid; 
   border-bottom-color: #a6ed6d;
-  font-size: 30px
+  font-size: 30px;
+  font-weight: 400;
 }
 
 .btn.btn-lg.btn-primary {
   padding:10px 16px;
   font-size: 18px;
   line-height: 1.333; 
-  border-radius: 6px
+  border-radius: 6px;
+  border-style: solid;
+  border-color: #d4d4d4;
 }
