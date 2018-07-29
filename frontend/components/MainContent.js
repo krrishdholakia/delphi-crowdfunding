@@ -99,7 +99,7 @@ class MainContent extends React.Component {
                     <h3 className = "main-title"> Traditional Crowdfunding made smart. </h3>
                     <p className = "main-description">
                         Delphi uses the convenience and safety of smart-contracts provided by the Ethereum blockchain network
-                        in traditional crowdfunding platforms like Kickstarter and Indiegogo. 
+                        to solve accountability on traditional crowdfunding platforms like Kickstarter and Indiegogo. 
                     </p>
                     <div className="quick-faq-container">
                         <div className="quick-faq-component"> <h3 onClick={() => this.handleFAQ(1)} style={{borderBottomColor: this.state.showFAQ1 ? '#a6ed6d': 'none', borderBottomStyle: this.state.showFAQ1 ? 'solid': 'none'}} className="quick-faq"> What are smart contracts ? </h3> </div>
