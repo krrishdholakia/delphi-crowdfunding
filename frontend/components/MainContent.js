@@ -16,7 +16,10 @@ class MainContent extends React.Component {
             errorQuestion:"",
             showSuccess: false,
             showFailure: false, 
-            showFAQ1: false 
+            showFAQ1: false, 
+            showFAQ2: false, 
+            showFAQ3: false, 
+            showFAQ4: false
         }       
         
         this.handleEmail = this.handleEmail.bind(this)
@@ -37,7 +40,26 @@ class MainContent extends React.Component {
     handleFAQ(e) {
         if (e == 1) {
             this.setState({showFAQ1: !this.state.showFAQ1})
-        } 
+            this.setState({showFAQ2: false})
+            this.setState({showFAQ3: false})
+            this.setState({showFAQ4: false})
+
+        } else if (e == 2) {
+            this.setState({showFAQ2: !this.state.showFAQ2})
+            this.setState({showFAQ1: false})
+            this.setState({showFAQ3: false})
+            this.setState({showFAQ4: false})
+        } else if (e == 3) {
+            this.setState({showFAQ3: !this.state.showFAQ3})
+            this.setState({showFAQ1: false})
+            this.setState({showFAQ2: false})
+            this.setState({showFAQ4: false})
+        } else if (e == 4) {
+            this.setState({showFAQ4: !this.state.showFAQ4})
+            this.setState({showFAQ1: false})
+            this.setState({showFAQ2: false})
+            this.setState({showFAQ3: false})
+        }
     }
 
     onSubmit() {
@@ -79,17 +101,15 @@ class MainContent extends React.Component {
                         Delphi uses the convenience and safety of smart-contracts provided by the Ethereum blockchain network
                         in traditional crowdfunding platforms like Kickstarter and Indiegogo. 
                     </p>
-                    <div>
-                        <h3 onClick={() => this.handleFAQ(1)}> What are smart contracts ? </h3> 
-                        <h3 style={{display: this.state.showFAQ1 ? 'block' : 'none'}}> Contracts which are built atop a blockchain. </h3>
-                        <h3 onClick={() => this.handleFAQ(2)}> What are smart contracts ? </h3> 
-                        <h3 style={{display: this.state.showFAQ1 ? 'block' : 'none'}}> Contracts which are built atop a blockchain. </h3>
-                        <h3 onClick={() => this.handleFAQ(3)}> What are smart contracts ? </h3> 
-                        <h3 style={{display: this.state.showFAQ1 ? 'block' : 'none'}}> Contracts which are built atop a blockchain. </h3>
-                        <h3 onClick={() => this.handleFAQ(4)}> What are smart contracts ? </h3> 
-                        <h3 style={{display: this.state.showFAQ1 ? 'block' : 'none'}}> Contracts which are built atop a blockchain. </h3>
-                        <h3 onClick={() => this.handleFAQ(5)}> What are smart contracts ? </h3> 
-                        <h3 style={{display: this.state.showFAQ1 ? 'block' : 'none'}}> Contracts which are built atop a blockchain. </h3> 
+                    <div className="quick-faq-container">
+                        <div className="quick-faq-component"> <h3 onClick={() => this.handleFAQ(1)} style={{borderBottomColor: this.state.showFAQ1 ? '#a6ed6d': 'none', borderBottomStyle: this.state.showFAQ1 ? 'solid': 'none', wi}} className="quick-faq"> What are smart contracts ? </h3> </div>
+                        <div className="quick-faq-component"> <h3 onClick={() => this.handleFAQ(2)} style={{borderBottomColor: this.state.showFAQ2 ? '#a6ed6d': 'none', borderBottomStyle: this.state.showFAQ2 ? 'solid': 'none'}} className="quick-faq"> How are they secure ? </h3> </div>
+                        <div className="quick-faq-component"> <h3 onClick={() => this.handleFAQ(3)} style={{borderBottomColor: this.state.showFAQ3 ? '#a6ed6d': 'none', borderBottomStyle: this.state.showFAQ3 ? 'solid': 'none'}} className="quick-faq"> What is Blockchain? </h3> </div>
+                        <div className="quick-faq-component"> <h3 onClick={() => this.handleFAQ(4)} style={{borderBottomColor: this.state.showFAQ4 ? '#a6ed6d': 'none', borderBottomStyle: this.state.showFAQ4 ? 'solid': 'none'}} className="quick-faq"> What is Ethereum ? </h3> </div>
+                        <h3 style={{display: this.state.showFAQ1 ? 'block' : 'none', fontFamily: 'Open Sans'}}> A smart contract is an agreement in the form of a program (eg. if event A occurs then action B will be executed ). </h3>
+                        <h3 style={{display: this.state.showFAQ2 ? 'block' : 'none', fontFamily: 'Open Sans'}}> A smart contract can be written on top of a blockchain, lending to it the security of the network blockchain. Making it hard for them to be tampered with, which would be equivalent to changing transaction details in the blockchain. </h3>
+                        <h3 style={{display: this.state.showFAQ3 ? 'block' : 'none', fontFamily: 'Open Sans'}}> A blockchain is essentially a chain of recorded transactions between members on that network. Since all transactions are linked to one another (like a chain), if any party wishes to make a change to a transaction, they would then have to change every succeeding transaction which points to the previous transaction. Since transactions are being added to the blockchain continuously (ever 30s for Ethereum), this would make it increasingly difficult for a party to change a transaction detail. Thus, the transaction parties on a network no longer need to trust each other to complete a transaction, the trust is in the security of the network blockchain. </h3>
+                        <h3 style={{display: this.state.showFAQ4 ? 'block' : 'none', fontFamily: 'Open Sans'}}> At its simplest, Ethereum is an open software platform based on blockchain technology that lets us build apps on top of it, letting us harness the power of its blockchain network (the bigger the network, the quicker the blockchain gets bigger, making every transaction on it more secure). </h3>
                     </div>
                     <h3 className = "sign-up"> Sign Up for the Beta! </h3>
                     <div className="sign-up-email-container">
