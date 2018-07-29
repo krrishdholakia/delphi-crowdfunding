@@ -38,6 +38,7 @@ body {
   margin-top: 0;  
   border-color: #a6ed6d;
   text-decoration: none;
+  font-weight: lighter; 
 }
 
 .header-actions{
@@ -49,6 +50,7 @@ body {
 .header-actions-links {
   margin-top: 0;
   text-decoration: none;
+  font-weight: lighter; 
 }
 
 .main-content-container {
@@ -94,6 +96,10 @@ body {
 .quick-faq {
   width: fit-content;
   font-size: 25px; 
+}
+
+.quick-faq-answer-component {
+  width: 100%; 
 }
 
 .sign-up {
