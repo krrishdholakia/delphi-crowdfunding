@@ -11,9 +11,8 @@ class ContactUs extends React.Component {
         return (
             <div className="contact-us-content"> 
                 <h3 className="contact-us-title"> Send us an email </h3> 
-                <p style={{ fontSize: '20px' }}> @ </p>
                 <h3 className="contact-us-email"> delphiCrowdfunding@gmail.com </h3> 
-                <p style={{ fontSize: '20px' }}> ❤️ </p>
+                <p style={{ fontSize: '20px' }}> ❤️ </p> 
             </div>
         );
     }   
