@@ -102,7 +102,7 @@ class MainContent extends React.Component {
                         in traditional crowdfunding platforms like Kickstarter and Indiegogo. 
                     </p>
                     <div className="quick-faq-container">
-                        <div className="quick-faq-component"> <h3 onClick={() => this.handleFAQ(1)} style={{borderBottomColor: this.state.showFAQ1 ? '#a6ed6d': 'none', borderBottomStyle: this.state.showFAQ1 ? 'solid': 'none', wi}} className="quick-faq"> What are smart contracts ? </h3> </div>
+                        <div className="quick-faq-component"> <h3 onClick={() => this.handleFAQ(1)} style={{borderBottomColor: this.state.showFAQ1 ? '#a6ed6d': 'none', borderBottomStyle: this.state.showFAQ1 ? 'solid': 'none'}} className="quick-faq"> What are smart contracts ? </h3> </div>
                         <div className="quick-faq-component"> <h3 onClick={() => this.handleFAQ(2)} style={{borderBottomColor: this.state.showFAQ2 ? '#a6ed6d': 'none', borderBottomStyle: this.state.showFAQ2 ? 'solid': 'none'}} className="quick-faq"> How are they secure ? </h3> </div>
                         <div className="quick-faq-component"> <h3 onClick={() => this.handleFAQ(3)} style={{borderBottomColor: this.state.showFAQ3 ? '#a6ed6d': 'none', borderBottomStyle: this.state.showFAQ3 ? 'solid': 'none'}} className="quick-faq"> What is Blockchain? </h3> </div>
                         <div className="quick-faq-component"> <h3 onClick={() => this.handleFAQ(4)} style={{borderBottomColor: this.state.showFAQ4 ? '#a6ed6d': 'none', borderBottomStyle: this.state.showFAQ4 ? 'solid': 'none'}} className="quick-faq"> What is Ethereum ? </h3> </div>
