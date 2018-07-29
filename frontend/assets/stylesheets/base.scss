@@ -3,6 +3,40 @@ h1 {
   font-weight: 200;
 }
 
+@media only screen and (max-width: 600px) {
+  .header-actions {
+    width: 55% !important; 
+  }
+  
+  .main-title {
+    font-size: 44px !important;
+  }
+
+  .main-description {
+    font-size: 20px !important;
+  }
+  .sign-up-email {
+    width: 80% !important;
+  }
+
+  .sign-up-question {
+    width: 80% !important; 
+  }
+
+  .sign-up-submit {
+    height: 1em !important;
+    padding-top: 7% !important;
+    padding-bottom: 7% !important; 
+    padding-left: 25% !important; 
+    padding-right: 25% !important; 
+  }
+
+  .contact-us-email {
+    font-size: 24px !important;
+  }
+  
+}
+
 h3 {
   font-family: Josefin Sans, sans-serif;
   color: black
@@ -45,6 +79,7 @@ body {
   display: flex; 
   justify-content: space-around; 
   width: 25%; 
+  align-items: center;
 }
 
 .header-actions-links {
@@ -70,6 +105,7 @@ body {
   font-family: Josefin Sans, sans-serif;
   font-size: 50px;
   margin-bottom: 0; 
+  text-align: center;
 }
 
 .main-description {
@@ -104,12 +140,20 @@ body {
   width: 100%;
 }
 
-.sign-up {
+.sign-up-title {
+  padding-bottom: 2px;
+}
+
+.sign-up-title {
   font-family: Josefin Sans, sans-serif;
   border-bottom-style: solid;
-  padding-bottom: 2px;
   border-color: #a6ed6d;
   font-size: 30px;
+  margin-bottom: 0; 
+}
+
+.sign-up-title-message {
+  text-align: center;
 }
 
 .sign-up-email {
@@ -194,7 +238,8 @@ body {
 }
 
 .faq-title {
-  font-size: 50px; 
+  font-size: 50px;
+  text-align: center; 
 }
 
 .faq-question {
@@ -219,6 +264,7 @@ body {
 
 .contact-us-title {
   font-size: 50px;
+  text-align: center;
 }
 
 .contact-us-email {

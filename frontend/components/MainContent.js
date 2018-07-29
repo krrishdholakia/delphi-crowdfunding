@@ -111,7 +111,10 @@ class MainContent extends React.Component {
                         <div className="quick-faq-answer-component"><h3 style={{display: this.state.showFAQ3 ? 'block' : 'none', fontSize: '18px', fontWeight: '400'}}> A blockchain is essentially a chain of recorded transactions between members on that network. Since all transactions are linked to one another (like a chain), if any party wishes to make a change to a transaction, they would then have to change every succeeding transaction which points to the previous transaction. Since transactions are being added to the blockchain continuously (ever 30s for Ethereum), this would make it increasingly difficult for a party to change a transaction detail. Thus, the transaction parties on a network no longer need to trust each other to complete a transaction, the trust is in the security of the network blockchain. </h3> </div>
                         <div className="quick-faq-answer-component"><h3 style={{display: this.state.showFAQ4 ? 'block' : 'none', fontSize: '18px', fontWeight: '400'}}> At its simplest, Ethereum is an open software platform based on blockchain technology that lets us build apps on top of it, letting us harness the power of its blockchain network (the bigger the network, the bigger the blockchain, the more secure your contract). </h3> </div>
                     </div>
-                    <h3 className = "sign-up"> Sign Up for the Beta! </h3>
+                    <div className="sign-up-title-container"> 
+                        <h3 className = "sign-up-title"> Sign Up for the Beta! </h3>
+                        <p className="sign-up-title-message"> (no spam we promise ❤️) </p>
+                    </div>
                     <div className="sign-up-email-container">
                         <input type="email" className="sign-up-email" placeholder="Email Address.." onChange={this.handleEmail}/>
                         <div className="error">{this.state.errorEmail? this.state.errorEmail:null}</div>
